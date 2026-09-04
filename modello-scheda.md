@@ -18,9 +18,9 @@ Nome dell'autore
 
 5
 
-## Nota
+## Citazione
 
-Scrivi qui una breve nota sul libro. Due frasi sono sufficienti.
+Inserisci un solo passaggio tratto dal libro, senza virgolette e di non più di 25 parole.
 
 ## Temi
 

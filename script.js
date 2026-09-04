@@ -8,7 +8,10 @@ const STAR_SVG = `
 const THEME_SYNONYMS = {
   amore: ["desiderio", "gelosia", "affetti", "matrimonio"],
   famiglia: ["genitori", "figli", "padre", "madre"],
+  figli: ["famiglia", "genitori", "padre", "madre", "responsabilità"],
   lavoro: ["insegnamento", "sfruttamento", "ranch"],
+  natura: ["terra", "campagna", "radici"],
+  magia: ["destino", "sogno", "inspiegabili", "bene e male"],
   memoria: ["ricordi", "radici", "ritorno", "tempo"],
   liberta: ["libertà", "censura", "esilio", "potere"],
   sogno: ["illusione", "immaginazione", "destino"],
@@ -44,7 +47,7 @@ function bookMatchesQuery(book, query) {
   const text = normalize([
     book.title,
     book.author,
-    book.note,
+    book.quote,
     ...book.themes
   ].join(" "));
 
@@ -76,7 +79,7 @@ function renderBookCard(book) {
       <span class="book-title">${title}</span>
       <span class="book-author">${author}</span>
       ${renderStars(book.stars)}
-      <span class="book-tooltip" aria-hidden="true">apri la scheda</span>
+      <span class="book-tooltip" aria-hidden="true">vai in libreria a cercarlo!</span>
     </button>`;
 }
 
@@ -110,8 +113,8 @@ function updateSearch(query) {
 
   resultMessage.hidden = false;
   resultMessage.textContent = visibleBooks.length === 1
-    ? `Ho trovato un libro per “${currentQuery}”`
-    : `Ho trovato ${visibleBooks.length} libri per “${currentQuery}”`;
+    ? `trovato 1 libro per “${currentQuery}”`
+    : `trovati ${visibleBooks.length} libri per “${currentQuery}”`;
 }
 
 function resetSearch() {
@@ -163,19 +166,19 @@ function renderModalContent() {
         <img src="${escapeHTML(book.cover)}" alt="Copertina di ${escapeHTML(book.title)}" />
       </div>
       <div class="detail-copy">
-        <p class="detail-kicker">Appunto di lettura</p>
+        <p class="detail-kicker">una frase che mi è rimasta impressa</p>
         <h2 class="detail-title" id="modal-title">${escapeHTML(book.title)}</h2>
         <p class="detail-author">di ${escapeHTML(book.author)}</p>
         <div class="detail-meta">
           <span class="detail-year">${book.year}</span>
           ${renderStars(book.stars)}
         </div>
-        <p class="detail-note">${escapeHTML(book.note)}</p>
+        <blockquote class="detail-quote">${escapeHTML(book.quote)}</blockquote>
         <div class="detail-themes">
-          <h3>I temi del libro</h3>
+          <h3>I temi che ho trovato leggendolo</h3>
           <ul class="themes-list">${themes}</ul>
         </div>
-        <button type="button" class="where-button" id="where-button" aria-haspopup="dialog">Dove cercarlo?</button>
+        <button type="button" class="where-button" id="where-button" aria-haspopup="dialog">Dove comprarlo?</button>
       </div>
     </div>`;
 }
@@ -275,7 +278,6 @@ function setupDialogs() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("book-count").textContent = `${BOOKS.length} libri scelti`;
   renderGrid(BOOKS);
   setupSearch();
   setupDialogs();

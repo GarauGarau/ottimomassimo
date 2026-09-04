@@ -18,9 +18,9 @@ Fëdor Dostoevskij
 
 5
 
-## Nota
+## Citazione
 
-Un giovane solitario incontra Nasten'ka durante le notti chiare di Pietroburgo. In pochi giorni l'attesa di lei e l'immaginazione di lui costruiscono una felicità fragile.
+Un intero attimo di beatitudine! È forse poco per la vita intera di un uomo?
 
 ## Temi
 

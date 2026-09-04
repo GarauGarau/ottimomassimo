@@ -18,9 +18,9 @@ Milan Kundera
 
 5
 
-## Nota
+## Citazione
 
-Quattro vite si intrecciano nella Cecoslovacchia della Primavera di Praga. Kundera interroga il peso delle scelte, del corpo e dell'amore senza separare la storia privata da quella politica.
+L'amore è la nostra libertà.
 
 ## Temi
 

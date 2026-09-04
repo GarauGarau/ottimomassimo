@@ -18,9 +18,9 @@ Michail Bulgakov
 
 5
 
-## Nota
+## Citazione
 
-Il diavolo arriva a Mosca con un seguito imprevedibile e ne scompiglia l'ordine. Satira, amore e racconto religioso convivono in un romanzo costruito contro la censura e la paura.
+I manoscritti non bruciano.
 
 ## Temi
 

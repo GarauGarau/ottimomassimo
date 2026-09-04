@@ -18,9 +18,9 @@ Cesare Pavese
 
 5
 
-## Nota
+## Citazione
 
-Anguilla torna nelle Langhe dopo molti anni trascorsi in America. Cerca le proprie origini in un paesaggio familiare, mentre i ricordi dell'infanzia incontrano le ferite della guerra.
+Un paese ci vuole, non fosse che per il gusto di andarsene via.
 
 ## Temi
 

@@ -18,9 +18,9 @@ John Steinbeck
 
 5
 
-## Nota
+## Citazione
 
-George e Lennie lavorano nei ranch della California e risparmiano per avere un pezzo di terra. Il loro progetto resiste alla fatica, ma non alla durezza dell'ambiente che li circonda.
+Quelli come noi, che lavorano nelle fattorie, sono le persone più sole della terra.
 
 ## Temi
 

@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $booksDirectory = Join-Path $PSScriptRoot 'libri'
 $outputFile = Join-Path $booksDirectory 'catalogo.js'
-$requiredSections = @('Ordine', 'Titolo', 'Autore', 'Anno', 'Voto', 'Nota', 'Temi')
+$requiredSections = @('Ordine', 'Titolo', 'Autore', 'Anno', 'Voto', 'Citazione', 'Temi')
 $allowedCoverExtensions = @('.jpg', '.jpeg', '.png')
 
 function Read-BookSheet {
@@ -30,6 +30,9 @@ function Read-BookSheet {
     foreach ($line in Get-Content -LiteralPath $markdownFiles[0].FullName -Encoding UTF8) {
         if ($line -match '^#{1,2}\s+(.+?)\s*$') {
             $currentSection = $Matches[1].Trim()
+            if ($sections.Contains($currentSection)) {
+                throw "Nella scheda '$($markdownFiles[0].Name)' la sezione '$currentSection' compare più di una volta."
+            }
             $sections[$currentSection] = [System.Collections.Generic.List[string]]::new()
             continue
         }
@@ -49,10 +52,24 @@ function Read-BookSheet {
         return (($sections[$Name] -join "`n").Trim())
     }
 
-    foreach ($section in @('Titolo', 'Autore', 'Nota')) {
+    foreach ($section in @('Titolo', 'Autore', 'Citazione')) {
         if ([string]::IsNullOrWhiteSpace((Get-SectionText $section))) {
             throw "La sezione '$section' nella cartella '$($BookDirectory.Name)' non può essere vuota."
         }
+    }
+
+    $quote = Get-SectionText 'Citazione'
+    $quoteParagraphs = @(
+        $quote -split '(?:\r?\n){2,}' |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
+    )
+    if ($quoteParagraphs.Count -ne 1) {
+        throw "La sezione 'Citazione' nella cartella '$($BookDirectory.Name)' deve contenere un solo passaggio."
+    }
+
+    $quoteWordCount = @($quote -split '\s+' | Where-Object { $_ }).Count
+    if ($quoteWordCount -gt 25) {
+        throw "La citazione nella cartella '$($BookDirectory.Name)' non può superare 25 parole."
     }
 
     $themes = @(
@@ -88,7 +105,7 @@ function Read-BookSheet {
         author = Get-SectionText 'Autore'
         year = $year
         stars = $rating
-        note = Get-SectionText 'Nota'
+        quote = ($quote -replace '\s+', ' ')
         themes = $themes
         cover = $webCoverPath
     }

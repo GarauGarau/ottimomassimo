@@ -18,9 +18,9 @@ John Steinbeck
 
 5
 
-## Nota
+## Citazione
 
-La famiglia Joad attraversa gli Stati Uniti inseguendo una promessa di lavoro. Steinbeck racconta la povertà senza addolcirla e mostra come la dignità possa diventare solidarietà.
+Ovunque ci sia una lotta affinché le persone affamate possano mangiare, io sarò lì.
 
 ## Temi
 

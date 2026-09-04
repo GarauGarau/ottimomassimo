@@ -39,11 +39,11 @@
       <h1 class="title">
         <img src="assets/logo.png" alt="Ottimo massimo" class="title-logo" />
       </h1>
-      <p class="subtitle">Libri scelti con cura e qualche appunto per ricordarli.</p>
+      <p class="subtitle">Ti consiglio libri attraverso frasi che mi sono piaciute.</p>
 
       <nav class="header-meta" aria-label="Collegamenti principali">
         <button type="button" class="pill pill-button" id="selection-btn" aria-haspopup="dialog">
-          <span id="book-count">i libri scelti</span>
+          <span id="book-count">che libri ci sono qui?</span>
         </button>
         <a class="pill insta-pill" href="https://www.instagram.com/ottimo.massimo8/" target="_blank" rel="noopener" aria-label="Ottimo massimo su Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -53,15 +53,15 @@
           </svg>
           <span>@ottimo.massimo8</span>
         </a>
-        <a class="pill about-link" href="#chi-sono">il nome del diario</a>
+        <a class="pill about-link" href="#chi-sono">perché si chiama così?</a>
       </nav>
     </div>
   </header>
 
   <section class="search-section" aria-labelledby="search-title">
     <div class="search-inner">
-      <h2 class="search-title" id="search-title">Cerchi la prossima lettura?</h2>
-      <p class="search-subtitle">Scrivi un tema, un autore o un titolo.</p>
+      <h2 class="search-title" id="search-title">non sai cosa leggere?</h2>
+      <p class="search-subtitle">scrivi qua un tema che ti interessa</p>
 
       <form class="search-form" id="search-form" role="search">
         <label class="search-field" for="search-input">
@@ -70,7 +70,7 @@
             <line x1="20" y1="20" x2="16.5" y2="16.5" />
           </svg>
           <span class="sr-only">Cerca nel diario</span>
-          <input type="search" id="search-input" placeholder="Per esempio amore, memoria, lavoro" autocomplete="off" />
+          <input type="search" id="search-input" placeholder="es. figli, amore, lavoro, natura…" autocomplete="off" />
           <button type="button" class="search-clear" id="search-clear" aria-label="Cancella la ricerca" hidden>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
               <path d="M6 6 L 18 18 M 18 6 L 6 18" />
@@ -81,11 +81,10 @@
         <div class="search-hint" aria-label="Temi suggeriti">
           <span>Qualche idea</span>
           <button type="button" class="hint-pill" data-q="amore">amore</button>
-          <button type="button" class="hint-pill" data-q="solitudine">solitudine</button>
+          <button type="button" class="hint-pill" data-q="figli">figli</button>
           <button type="button" class="hint-pill" data-q="lavoro">lavoro</button>
-          <button type="button" class="hint-pill" data-q="memoria">memoria</button>
-          <button type="button" class="hint-pill" data-q="famiglia">famiglia</button>
-          <button type="button" class="hint-pill" data-q="libertà">libertà</button>
+          <button type="button" class="hint-pill" data-q="natura">natura</button>
+          <button type="button" class="hint-pill" data-q="magia">magia</button>
         </div>
       </form>
 
@@ -96,8 +95,8 @@
   <main class="library" id="libri">
     <div class="grid" id="book-grid"></div>
     <p class="empty-state" id="empty-state" hidden>
-      Non ho trovato un libro legato a questa ricerca.
-      <button type="button" id="reset-search" class="reset-link">Mostra di nuovo tutti i libri</button>
+      Nessun libro trovato per questo tema.
+      <button type="button" id="reset-search" class="reset-link">Torna a tutto il diario</button>
     </p>
   </main>
 
@@ -107,40 +106,40 @@
 
       <div class="about-flow">
         <p class="about-paragraph">
-          <span class="drop-cap">N</span>el <em>Barone rampante</em> Italo Calvino racconta di Cosimo Piovasco di Rondò, che sale su un elce e decide di non scendere più. Tra i rami incontra un bassotto randagio e lo chiama <strong>Ottimo Massimo</strong>.
+          <span class="drop-cap">N</span>el <em>Barone rampante</em> Italo Calvino racconta di Cosimo Piovasco di Rondò, che un giorno sale su un elce e decide di non scenderne più. Sui rami incontra un bassotto randagio, «una specie di delfino con un muso più aguzzo e delle orecchie più ciondoloni di un segugio», e battezza la bestiola con il nome di <strong>Ottimo massimo</strong>.
         </p>
 
         <figure class="about-photo about-photo-right photo-one">
-          <img src="assets/ottimo-1.jpg" alt="Mirtilla accanto a un libro aperto" loading="lazy" />
+          <img src="assets/ottimo-1.jpg" alt="La mia bassottina mentre leggo" loading="lazy" />
         </figure>
 
         <p class="about-paragraph">
-          Dopo quella lettura mi sono ripromesso che un giorno avrei avuto un bassotto. Alla fine è arrivata una bassotta.
+          Del resto ha «naso di segugio e cuore di leone», una di quelle creature che entrano nella tua vita e decidono, con la loro testarda dolcezza, dove devi guardare e cosa vale la pena annusare.
         </p>
 
         <p class="about-paragraph">
-          Si chiama <strong>Mirtilla</strong>. È nera e focata, con il muso sempre infilato in qualcosa che non la riguarda. Sa attraversare un capitolo intero in pochi minuti e addormentarsi proprio sulla pagina che sto leggendo.
+          Dopo aver letto quel libro, decisi che prima o poi avrei preso un bassotto. <em>Del resto che posso farci se alla fine è stata una bassotta?</em>
         </p>
 
         <figure class="about-photo about-photo-center photo-two">
-          <img src="assets/ottimo-3.jpg" alt="Il muso di Mirtilla in primo piano" loading="lazy" />
+          <img src="assets/ottimo-3.jpg" alt="Il naso di Mirtilla in primo piano" loading="lazy" />
         </figure>
 
         <p class="about-paragraph">
-          Questo diario porta il nome del cane di Calvino ed è dedicato a lei. Qui raccolgo soltanto libri che consiglierei volentieri a una persona amica.
+          Si chiama <strong>Mirtilla</strong>. Nera, focata, con il muso sempre infilato in qualcosa che non la riguarda. È la critica letteraria più severa che conosca ed è capace di attraversare un capitolo intero in pochi minuti, per poi addormentarsi di schianto sulla pagina più emozionante.
         </p>
 
         <figure class="about-photo about-photo-right photo-three">
-          <img src="assets/ottimo-2.jpg" alt="Mirtilla vicino alle pagine di un libro" loading="lazy" />
+          <img src="assets/ottimo-2.jpg" alt="La mia bassottina con il libro aperto" loading="lazy" />
         </figure>
 
         <p class="about-paragraph">
-          Ogni scheda conserva un appunto breve e i temi che ho incontrato durante la lettura. Sono tracce personali, non giudizi definitivi.
+          Questo diario si chiama come il cane di Calvino, ma è dedicato a lei. I libri che consiglio qui sono quelli che mi sono piaciuti davvero. Non c'è un algoritmo, c'è solo il naso di Mirtilla che annusa, fiuta e scarta.
         </p>
       </div>
 
       <p class="about-conclusion">
-        Qui non trovi link di acquisto. Se un libro ti incuriosisce, cercalo nella libreria sotto casa o chiedilo in prestito in biblioteca. Sfogliare, parlare con chi legge e lasciarsi consigliare fa parte della scoperta.
+        Non troverai link per comprarli qui. <strong>Non è un caso.</strong> L'obiettivo di questa pagina è uno solo. Invitarti ad andare in libreria, meglio se indipendente, sfogliare i libri, perderti tra gli scaffali e farti consigliare da chi ci lavora. Se un libro ti incuriosisce ma costa troppo o non lo trovi, chiedilo in prestito a un amico o in biblioteca. Le librerie sono posti fragili e meritano che ci passi davanti prima di comprare un libro con un clic.
       </p>
     </div>
   </section>
@@ -173,10 +172,11 @@
           <path d="M6 6 L 18 18 M 18 6 L 6 18" />
         </svg>
       </button>
-      <h2 id="where-popup-title" class="popup-title">Dove cercare il libro</h2>
-      <p>Prova nella libreria del tuo quartiere, meglio ancora se indipendente. Puoi anche controllare il catalogo della biblioteca più vicina o chiedere una copia a una persona amica.</p>
-      <p>Il sito non contiene collegamenti ai negozi. È una scelta semplice, pensata per lasciare più spazio ai libri e a chi li conosce.</p>
-      <button type="button" class="popup-action" data-where-close>Ho capito</button>
+      <h2 id="where-popup-title" class="popup-title">Perché non ci sono link per comprarli</h2>
+      <p>L'obiettivo di questa pagina è uno solo. <strong>Invitarti ad andare in libreria</strong>, meglio se indipendente, sfogliare i libri, perderti tra gli scaffali e farti consigliare da chi ci lavora.</p>
+      <p>Le librerie sono posti fragili e meritano che ci passi davanti prima di comprare un libro con un clic. Non troverai link ad Amazon, IBS o altri negozi. Non è un caso.</p>
+      <p>Se un libro ti incuriosisce, cercane una copia nella libreria sotto casa, chiedilo in prestito a un amico o cercalo in biblioteca. Il piacere di scoprire un libro non passa per il carrello, ma per gli scaffali, le pagine sfogliate e le persone che ti consigliano.</p>
+      <button type="button" class="popup-action" data-where-close>capito, chiudi</button>
     </div>
   </div>
 
@@ -188,14 +188,12 @@
           <path d="M6 6 L 18 18 M 18 6 L 6 18" />
         </svg>
       </button>
-      <h2 id="selection-popup-title" class="popup-title">Una scelta personale</h2>
-      <p>Questa pagina non vuole essere un catalogo. Raccoglie i libri che mi sono rimasti vicini e che consiglierei durante una conversazione davanti alla libreria di casa.</p>
+      <h2 id="selection-popup-title" class="popup-title">Che tipo di libri ci sono qui?</h2>
+      <p>Quello che vedi qui dentro è <mark class="hl-hand">una selezione</mark>, non un catalogo. Sono i libri che mi hanno colpito di più tra quelli che ho letto, quelli che consiglierei a un'amica o un amico che, venendo a casa e guardando la libreria, mi chiedesse <mark class="hl-hand">«cosa potrei leggere?»</mark></p>
     </div>
   </div>
 
-  <footer class="site-footer">
-    <p>Un diario di lettura in compagnia di Mirtilla.</p>
-  </footer>
+  <footer class="site-footer"></footer>
 
   <script src="libri/catalogo.js"></script>
   <script src="script.js"></script>

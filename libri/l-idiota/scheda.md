@@ -18,9 +18,9 @@ Fëdor Dostoevskij
 
 5
 
-## Nota
+## Citazione
 
-Il principe Myškin torna in Russia con una fiducia negli altri che molti scambiano per ingenuità. La sua bontà mette a nudo desideri, rivalità e paure di chi gli sta intorno.
+La compassione era la massima e forse unica legge di vita per l'intera umanità.
 
 ## Temi
 

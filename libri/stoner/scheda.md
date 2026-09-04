@@ -18,9 +18,9 @@ John Williams
 
 5
 
-## Nota
+## Citazione
 
-Una vita comune osservata con attenzione, dai primi studi fino alla vecchiaia. Il romanzo trova peso e bellezza nel lavoro, nei fallimenti e negli affetti che non fanno rumore.
+Quando si congedarono, sentì che erano estranei in un modo per lui impensabile, e capì di essersi innamorato.
 
 ## Temi
 

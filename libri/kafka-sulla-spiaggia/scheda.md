@@ -18,9 +18,9 @@ Haruki Murakami
 
 5
 
-## Nota
+## Citazione
 
-Due storie lontane avanzano fino a sfiorarsi, tra profezie, ricordi e incontri inspiegabili. Murakami lascia che il sogno entri nella realtà senza chiarire ogni passaggio.
+Può darsi che avere in mano il simbolo della propria libertà dia una felicità superiore a quella di possedere la libertà vera.
 
 ## Temi
 

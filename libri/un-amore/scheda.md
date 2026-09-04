@@ -18,9 +18,9 @@ Dino Buzzati
 
 5
 
-## Nota
+## Citazione
 
-Antonio Dorigo si innamora di Laide e cerca certezze in un rapporto che ne offre pochissime. Buzzati segue con lucidità la gelosia, l'attesa e l'autoinganno.
+La consolazione, la felicità era tale che il modo di raggiungerla non aveva più alcuna importanza.
 
 ## Temi
 

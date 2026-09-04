@@ -851,8 +851,14 @@ ul {
   margin-top: 0;
 }
 
-.detail-note {
+.detail-quote {
   margin-top: 24px;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 18px;
+  border-left: 3px solid var(--red-deep);
+  font-family: var(--font-hand);
   font-size: clamp(1.08rem, 2vw, 1.24rem);
   line-height: 1.65;
 }
@@ -1059,7 +1065,7 @@ input:focus-visible {
     font-size: clamp(1.75rem, 8vw, 2.4rem);
   }
 
-  .detail-note,
+  .detail-quote,
   .detail-themes,
   .where-button {
     grid-column: 1 / -1;
@@ -1084,7 +1090,7 @@ input:focus-visible {
     align-self: center;
   }
 
-  .detail-note {
+  .detail-quote {
     margin-top: 8px;
   }
 
