@@ -205,7 +205,6 @@ ul {
 
 .pill-button {
   appearance: none;
-  background: var(--yellow);
 }
 
 .insta-pill {
@@ -676,6 +675,10 @@ ul {
   transform: rotate(1deg);
 }
 
+.photo-two img {
+  object-position: center 62%;
+}
+
 .photo-three {
   transform: rotate(1.5deg);
 }
@@ -939,6 +942,14 @@ ul {
   margin-top: 16px;
   font-size: 1rem;
   line-height: 1.65;
+}
+
+.hl-hand {
+  padding: 0 0.12em;
+  color: inherit;
+  background: linear-gradient(transparent 16%, var(--yellow) 16%, var(--yellow) 88%, transparent 88%);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .site-footer {
