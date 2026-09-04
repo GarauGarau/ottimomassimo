@@ -166,7 +166,6 @@ function renderModalContent() {
         <img src="${escapeHTML(book.cover)}" alt="Copertina di ${escapeHTML(book.title)}" />
       </div>
       <div class="detail-copy">
-        <p class="detail-kicker">una frase che mi è rimasta impressa</p>
         <h2 class="detail-title" id="modal-title">${escapeHTML(book.title)}</h2>
         <p class="detail-author">di ${escapeHTML(book.author)}</p>
         <div class="detail-meta">
