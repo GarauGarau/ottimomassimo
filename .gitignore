@@ -1,0 +1,13 @@
+dist/
+site-package.tar.gz
+
+# File della versione precedente non più usati dal sito
+9788807892790-it.jpg
+Logo2.png
+Mirtillo.png
+Foto/
+assets/covers/
+assets/identikits/
+assets/blueberry.svg
+assets/mirtilla-dog.svg
+assets/mirtillo-drawing.png

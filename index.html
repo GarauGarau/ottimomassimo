@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ottimo massimo raccoglie libri scelti e appunti di lettura per trovare la prossima storia da leggere." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ottimo massimo" />
+  <meta property="og:description" content="Libri scelti e appunti di lettura." />
+  <meta property="og:url" content="https://ottimo-massimo-diario.cheeky-cake-1586.chatgpt.site" />
+  <meta property="og:image" content="https://ottimo-massimo-diario.cheeky-cake-1586.chatgpt.site/assets/og.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ottimo massimo" />
+  <meta name="twitter:description" content="Libri scelti e appunti di lettura." />
+  <meta name="twitter:image" content="https://ottimo-massimo-diario.cheeky-cake-1586.chatgpt.site/assets/og.png" />
+  <title>Ottimo massimo | Diario di lettura</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@500;600;700&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="paper-bg" aria-hidden="true"></div>
+
+  <svg class="doodle doodle-1" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M10 50 Q 25 20 50 50 T 90 50" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+    <circle cx="50" cy="50" r="4" fill="currentColor" />
+  </svg>
+  <svg class="doodle doodle-2" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M20 80 L 30 70 L 40 80 L 50 65 L 60 80 L 70 70 L 80 80" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" />
+  </svg>
+  <svg class="doodle doodle-3" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M50 15 L 55 40 L 80 45 L 55 50 L 50 75 L 45 50 L 20 45 L 45 40 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+  </svg>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <h1 class="title">
+        <img src="assets/logo.png" alt="Ottimo massimo" class="title-logo" />
+      </h1>
+      <p class="subtitle">Libri scelti con cura e qualche appunto per ricordarli.</p>
+
+      <nav class="header-meta" aria-label="Collegamenti principali">
+        <button type="button" class="pill pill-button" id="selection-btn" aria-haspopup="dialog">
+          <span id="book-count">i libri scelti</span>
+        </button>
+        <a class="pill insta-pill" href="https://www.instagram.com/ottimo.massimo8/" target="_blank" rel="noopener" aria-label="Ottimo massimo su Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+          </svg>
+          <span>@ottimo.massimo8</span>
+        </a>
+        <a class="pill about-link" href="#chi-sono">il nome del diario</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="search-section" aria-labelledby="search-title">
+    <div class="search-inner">
+      <h2 class="search-title" id="search-title">Cerchi la prossima lettura?</h2>
+      <p class="search-subtitle">Scrivi un tema, un autore o un titolo.</p>
+
+      <form class="search-form" id="search-form" role="search">
+        <label class="search-field" for="search-input">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="20" y1="20" x2="16.5" y2="16.5" />
+          </svg>
+          <span class="sr-only">Cerca nel diario</span>
+          <input type="search" id="search-input" placeholder="Per esempio amore, memoria, lavoro" autocomplete="off" />
+          <button type="button" class="search-clear" id="search-clear" aria-label="Cancella la ricerca" hidden>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M6 6 L 18 18 M 18 6 L 6 18" />
+            </svg>
+          </button>
+        </label>
+
+        <div class="search-hint" aria-label="Temi suggeriti">
+          <span>Qualche idea</span>
+          <button type="button" class="hint-pill" data-q="amore">amore</button>
+          <button type="button" class="hint-pill" data-q="solitudine">solitudine</button>
+          <button type="button" class="hint-pill" data-q="lavoro">lavoro</button>
+          <button type="button" class="hint-pill" data-q="memoria">memoria</button>
+          <button type="button" class="hint-pill" data-q="famiglia">famiglia</button>
+          <button type="button" class="hint-pill" data-q="libertà">libertà</button>
+        </div>
+      </form>
+
+      <p class="search-result-msg" id="search-result-msg" aria-live="polite" hidden></p>
+    </div>
+  </section>
+
+  <main class="library" id="libri">
+    <div class="grid" id="book-grid"></div>
+    <p class="empty-state" id="empty-state" hidden>
+      Non ho trovato un libro legato a questa ricerca.
+      <button type="button" id="reset-search" class="reset-link">Mostra di nuovo tutti i libri</button>
+    </p>
+  </main>
+
+  <section class="about-section" id="chi-sono" aria-labelledby="about-title">
+    <div class="about-inner">
+      <h2 class="about-title" id="about-title">Perché <em>Ottimo massimo</em></h2>
+
+      <div class="about-flow">
+        <p class="about-paragraph">
+          <span class="drop-cap">N</span>el <em>Barone rampante</em> Italo Calvino racconta di Cosimo Piovasco di Rondò, che sale su un elce e decide di non scendere più. Tra i rami incontra un bassotto randagio e lo chiama <strong>Ottimo Massimo</strong>.
+        </p>
+
+        <figure class="about-photo about-photo-right photo-one">
+          <img src="assets/ottimo-1.jpg" alt="Mirtilla accanto a un libro aperto" loading="lazy" />
+        </figure>
+
+        <p class="about-paragraph">
+          Dopo quella lettura mi sono ripromesso che un giorno avrei avuto un bassotto. Alla fine è arrivata una bassotta.
+        </p>
+
+        <p class="about-paragraph">
+          Si chiama <strong>Mirtilla</strong>. È nera e focata, con il muso sempre infilato in qualcosa che non la riguarda. Sa attraversare un capitolo intero in pochi minuti e addormentarsi proprio sulla pagina che sto leggendo.
+        </p>
+
+        <figure class="about-photo about-photo-center photo-two">
+          <img src="assets/ottimo-3.jpg" alt="Il muso di Mirtilla in primo piano" loading="lazy" />
+        </figure>
+
+        <p class="about-paragraph">
+          Questo diario porta il nome del cane di Calvino ed è dedicato a lei. Qui raccolgo soltanto libri che consiglierei volentieri a una persona amica.
+        </p>
+
+        <figure class="about-photo about-photo-right photo-three">
+          <img src="assets/ottimo-2.jpg" alt="Mirtilla vicino alle pagine di un libro" loading="lazy" />
+        </figure>
+
+        <p class="about-paragraph">
+          Ogni scheda conserva un appunto breve e i temi che ho incontrato durante la lettura. Sono tracce personali, non giudizi definitivi.
+        </p>
+      </div>
+
+      <p class="about-conclusion">
+        Qui non trovi link di acquisto. Se un libro ti incuriosisce, cercalo nella libreria sotto casa o chiedilo in prestito in biblioteca. Sfogliare, parlare con chi legge e lasciarsi consigliare fa parte della scoperta.
+      </p>
+    </div>
+  </section>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <button type="button" class="modal-arrow modal-arrow-left" id="prev-book" aria-label="Libro precedente">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M15 18 L 9 12 L 15 6" />
+      </svg>
+    </button>
+    <button type="button" class="modal-arrow modal-arrow-right" id="next-book" aria-label="Libro successivo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M9 18 L 15 12 L 9 6" />
+      </svg>
+    </button>
+    <div class="modal-content" id="modal-content"></div>
+    <button type="button" class="round-close modal-close" data-close aria-label="Chiudi la scheda">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+        <path d="M6 6 L 18 18 M 18 6 L 6 18" />
+      </svg>
+    </button>
+  </div>
+
+  <div class="popup" id="where-popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="where-popup-title">
+    <div class="popup-backdrop" data-where-close></div>
+    <div class="popup-card">
+      <button type="button" class="round-close popup-close" data-where-close aria-label="Chiudi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6 L 18 18 M 18 6 L 6 18" />
+        </svg>
+      </button>
+      <h2 id="where-popup-title" class="popup-title">Dove cercare il libro</h2>
+      <p>Prova nella libreria del tuo quartiere, meglio ancora se indipendente. Puoi anche controllare il catalogo della biblioteca più vicina o chiedere una copia a una persona amica.</p>
+      <p>Il sito non contiene collegamenti ai negozi. È una scelta semplice, pensata per lasciare più spazio ai libri e a chi li conosce.</p>
+      <button type="button" class="popup-action" data-where-close>Ho capito</button>
+    </div>
+  </div>
+
+  <div class="popup" id="selection-popup" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="selection-popup-title">
+    <div class="popup-backdrop" data-selection-close></div>
+    <div class="popup-card">
+      <button type="button" class="round-close popup-close" data-selection-close aria-label="Chiudi">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+          <path d="M6 6 L 18 18 M 18 6 L 6 18" />
+        </svg>
+      </button>
+      <h2 id="selection-popup-title" class="popup-title">Una scelta personale</h2>
+      <p>Questa pagina non vuole essere un catalogo. Raccoglie i libri che mi sono rimasti vicini e che consiglierei durante una conversazione davanti alla libreria di casa.</p>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <p>Un diario di lettura in compagnia di Mirtilla.</p>
+  </footer>
+
+  <script src="libri/catalogo.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
