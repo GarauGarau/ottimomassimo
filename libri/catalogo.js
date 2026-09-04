@@ -15,7 +15,7 @@ window.BOOKS = [
       "Solidarietà",
       "Terra"
     ],
-    "cover": "libri/furore/copertina.jpg"
+    "cover": "libri/furore/copertina.jpg?v=35bde1b4879b"
   },
   {
     "order": 2,
@@ -33,7 +33,7 @@ window.BOOKS = [
       "Solitudine",
       "Tempo"
     ],
-    "cover": "libri/stoner/copertina.jpg"
+    "cover": "libri/stoner/copertina.jpg?v=9edcd66b27b8"
   },
   {
     "order": 3,
@@ -51,7 +51,7 @@ window.BOOKS = [
       "Memoria",
       "Musica"
     ],
-    "cover": "libri/kafka-sulla-spiaggia/copertina.jpg"
+    "cover": "libri/kafka-sulla-spiaggia/copertina.jpg?v=71aa93ee75d3"
   },
   {
     "order": 4,
@@ -69,7 +69,7 @@ window.BOOKS = [
       "Denaro",
       "Società"
     ],
-    "cover": "libri/l-idiota/copertina.jpg"
+    "cover": "libri/l-idiota/copertina.jpg?v=cae6c6e21091"
   },
   {
     "order": 5,
@@ -87,7 +87,7 @@ window.BOOKS = [
       "Esilio",
       "Politica"
     ],
-    "cover": "libri/l-insostenibile-leggerezza-dell-essere/copertina.jpg"
+    "cover": "libri/l-insostenibile-leggerezza-dell-essere/copertina.jpg?v=b108270718dc"
   },
   {
     "order": 6,
@@ -105,7 +105,7 @@ window.BOOKS = [
       "Incontro",
       "Pietroburgo"
     ],
-    "cover": "libri/le-notti-bianche/copertina.jpg"
+    "cover": "libri/le-notti-bianche/copertina.jpg?v=c18719c6dfe0"
   },
   {
     "order": 7,
@@ -123,7 +123,7 @@ window.BOOKS = [
       "Libertà",
       "Bene e male"
     ],
-    "cover": "libri/il-maestro-e-margherita/copertina.jpg"
+    "cover": "libri/il-maestro-e-margherita/copertina.jpg?v=0b49937ec38d"
   },
   {
     "order": 8,
@@ -141,7 +141,7 @@ window.BOOKS = [
       "Differenza di età",
       "Milano"
     ],
-    "cover": "libri/un-amore/copertina.jpg"
+    "cover": "libri/un-amore/copertina.jpg?v=77aa00b03843"
   },
   {
     "order": 9,
@@ -159,7 +159,7 @@ window.BOOKS = [
       "Responsabilità",
       "Emarginazione"
     ],
-    "cover": "libri/uomini-e-topi/copertina.jpg"
+    "cover": "libri/uomini-e-topi/copertina.jpg?v=37e6c958cade"
   },
   {
     "order": 10,
@@ -177,7 +177,7 @@ window.BOOKS = [
       "Guerra",
       "Solitudine"
     ],
-    "cover": "libri/la-luna-e-i-falo/copertina.jpg"
+    "cover": "libri/la-luna-e-i-falo/copertina.jpg?v=e8e0ba280cd6"
   }
 ];
 

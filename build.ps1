@@ -28,5 +28,6 @@ foreach ($asset in @('logo.png', 'og.png', 'ottimo-1.jpg', 'ottimo-2.jpg', 'otti
 Copy-Item -LiteralPath (Join-Path $projectDirectory 'libri') -Destination $distDirectory -Recurse
 Copy-Item -LiteralPath (Join-Path $projectDirectory 'site-worker.js') -Destination (Join-Path $distDirectory 'server\index.js')
 Copy-Item -LiteralPath (Join-Path $projectDirectory '.openai\hosting.json') -Destination (Join-Path $distDirectory '.openai\hosting.json')
+[IO.File]::WriteAllText((Join-Path $distDirectory '.nojekyll'), '')
 
 Write-Host 'Sito preparato nella cartella dist.'

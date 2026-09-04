@@ -96,7 +96,8 @@ function Read-BookSheet {
         throw "Il valore di 'Voto' nella cartella '$($BookDirectory.Name)' deve essere compreso tra 1 e 5."
     }
 
-    $webCoverPath = "libri/$($BookDirectory.Name)/$($coverFiles[0].Name)"
+    $coverHash = (Get-FileHash -LiteralPath $coverFiles[0].FullName -Algorithm SHA256).Hash.Substring(0, 12).ToLowerInvariant()
+    $webCoverPath = "libri/$($BookDirectory.Name)/$($coverFiles[0].Name)?v=$coverHash"
 
     return [PSCustomObject]@{
         order = $order
