@@ -205,6 +205,7 @@ ul {
 
 .pill-button {
   appearance: none;
+  background: var(--yellow);
 }
 
 .insta-pill {
@@ -687,6 +688,10 @@ ul {
   text-align: center;
   font-size: 1.02rem;
   line-height: 1.7;
+}
+
+.about-conclusion p + p {
+  margin-top: 16px;
 }
 
 .modal,
