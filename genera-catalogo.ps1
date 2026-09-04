@@ -59,17 +59,20 @@ function Read-BookSheet {
     }
 
     $quote = Get-SectionText 'Citazione'
-    $quoteParagraphs = @(
-        $quote -split '(?:\r?\n){2,}' |
-            Where-Object { -not [string]::IsNullOrWhiteSpace($_) }
-    )
-    if ($quoteParagraphs.Count -ne 1) {
-        throw "La sezione 'Citazione' nella cartella '$($BookDirectory.Name)' deve contenere un solo passaggio."
+    $quoteParts = @($quote -split '(?m)^\s*---\s*$')
+    if ($quoteParts | Where-Object { [string]::IsNullOrWhiteSpace($_) }) {
+        throw "Nella sezione 'Citazione' della cartella '$($BookDirectory.Name)' c'è un passaggio vuoto."
     }
 
-    $quoteWordCount = @($quote -split '\s+' | Where-Object { $_ }).Count
-    if ($quoteWordCount -gt 200) {
-        throw "La citazione nella cartella '$($BookDirectory.Name)' non può superare 200 parole."
+    $quotes = @()
+    for ($quoteIndex = 0; $quoteIndex -lt $quoteParts.Count; $quoteIndex++) {
+        $currentQuote = $quoteParts[$quoteIndex].Trim()
+        $quoteWordCount = @($currentQuote -split '\s+' | Where-Object { $_ }).Count
+        if ($quoteWordCount -gt 200) {
+            $quoteNumber = $quoteIndex + 1
+            throw "La citazione numero $quoteNumber nella cartella '$($BookDirectory.Name)' non può superare 200 parole."
+        }
+        $quotes += ($currentQuote -replace '\s+', ' ')
     }
 
     $themes = @(
@@ -106,7 +109,8 @@ function Read-BookSheet {
         author = Get-SectionText 'Autore'
         year = $year
         stars = $rating
-        quote = ($quote -replace '\s+', ' ')
+        quote = $quotes[0]
+        quotes = @($quotes)
         themes = $themes
         cover = $webCoverPath
     }

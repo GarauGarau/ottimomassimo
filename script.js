@@ -22,6 +22,7 @@ const THEME_SYNONYMS = {
 let currentQuery = "";
 let visibleBooks = [...BOOKS];
 let currentIndex = 0;
+let currentQuoteIndex = 0;
 let lastFocused = null;
 
 function escapeHTML(value) {
@@ -43,11 +44,16 @@ function normalize(value) {
     .trim();
 }
 
+function getBookQuotes(book) {
+  const quotes = Array.isArray(book.quotes) ? book.quotes : [book.quote];
+  return quotes.filter((quote) => typeof quote === "string" && quote.trim());
+}
+
 function bookMatchesQuery(book, query) {
   const text = normalize([
     book.title,
     book.author,
-    book.quote,
+    ...getBookQuotes(book),
     ...book.themes
   ].join(" "));
 
@@ -156,6 +162,16 @@ function renderModalContent() {
   const book = visibleBooks[currentIndex];
   if (!book) return;
 
+  const quotes = getBookQuotes(book);
+  const quote = quotes[currentQuoteIndex] || "";
+  const quoteControls = quotes.length > 1
+    ? `<nav class="quote-pagination" aria-label="Scorri le citazioni">
+        <button type="button" class="quote-arrow" data-quote-step="-1" aria-label="Citazione precedente"><span aria-hidden="true">&lt;</span></button>
+        <span class="quote-counter" id="quote-counter" aria-live="polite">${currentQuoteIndex + 1}/${quotes.length}</span>
+        <button type="button" class="quote-arrow" data-quote-step="1" aria-label="Citazione successiva"><span aria-hidden="true">&gt;</span></button>
+      </nav>`
+    : "";
+
   const themes = book.themes
     .map((theme) => `<li class="theme-tag">${escapeHTML(theme)}</li>`)
     .join("");
@@ -172,7 +188,10 @@ function renderModalContent() {
           <span class="detail-year">${book.year}</span>
           ${renderStars(book.stars)}
         </div>
-        <blockquote class="detail-quote">${escapeHTML(book.quote)}</blockquote>
+        <div class="detail-quote-frame">
+          <blockquote class="detail-quote" id="detail-quote-text" aria-label="Citazione ${currentQuoteIndex + 1} di ${quotes.length}">${escapeHTML(quote)}</blockquote>
+          ${quoteControls}
+        </div>
         <div class="detail-themes">
           <h3>I temi che ho trovato leggendolo</h3>
           <ul class="themes-list">${themes}</ul>
@@ -187,6 +206,7 @@ function openModal(bookId) {
   if (index < 0) return;
 
   currentIndex = index;
+  currentQuoteIndex = 0;
   lastFocused = document.activeElement;
   renderModalContent();
   const modal = document.getElementById("modal");
@@ -207,7 +227,21 @@ function closeModal() {
 function navigateBooks(step) {
   if (visibleBooks.length === 0) return;
   currentIndex = (currentIndex + step + visibleBooks.length) % visibleBooks.length;
+  currentQuoteIndex = 0;
   renderModalContent();
+}
+
+function navigateQuotes(step) {
+  const book = visibleBooks[currentIndex];
+  const quotes = getBookQuotes(book);
+  if (quotes.length < 2) return;
+
+  currentQuoteIndex = (currentQuoteIndex + step + quotes.length) % quotes.length;
+  const quoteElement = document.getElementById("detail-quote-text");
+  const quoteCounter = document.getElementById("quote-counter");
+  quoteElement.textContent = quotes[currentQuoteIndex];
+  quoteElement.setAttribute("aria-label", `Citazione ${currentQuoteIndex + 1} di ${quotes.length}`);
+  quoteCounter.textContent = `${currentQuoteIndex + 1}/${quotes.length}`;
 }
 
 function setPopupState(popup, open, returnFocus) {
@@ -232,6 +266,10 @@ function setupDialogs() {
   document.getElementById("book-grid").addEventListener("click", (event) => {
     const book = event.target.closest(".book");
     if (book) openModal(book.dataset.bookId);
+  });
+  document.getElementById("modal-content").addEventListener("click", (event) => {
+    const quoteButton = event.target.closest("[data-quote-step]");
+    if (quoteButton) navigateQuotes(Number(quoteButton.dataset.quoteStep));
   });
   modal.querySelectorAll("[data-close]").forEach((element) => element.addEventListener("click", closeModal));
   document.getElementById("prev-book").addEventListener("click", () => navigateBooks(-1));

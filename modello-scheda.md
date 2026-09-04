@@ -20,7 +20,7 @@ Nome dell'autore
 
 ## Citazione
 
-Inserisci un solo passaggio tratto dal libro, senza virgolette e di non più di 200 parole.
+Inserisci il primo passaggio tratto dal libro, senza virgolette e con un massimo di 200 parole. Per aggiungerne altri, separali con una riga contenente soltanto tre trattini.
 
 ## Temi
 

@@ -855,8 +855,12 @@ ul {
   margin-top: 0;
 }
 
-.detail-quote {
+.detail-quote-frame {
   margin-top: 24px;
+}
+
+.detail-quote {
+  margin: 0;
   margin-right: 0;
   margin-bottom: 0;
   margin-left: 0;
@@ -865,6 +869,53 @@ ul {
   font-family: var(--font-hand);
   font-size: clamp(1.08rem, 2vw, 1.24rem);
   line-height: 1.65;
+}
+
+.quote-pagination {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 13px;
+  padding-left: 18px;
+}
+
+.quote-arrow {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  place-items: center;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  color: var(--ink);
+  background: var(--cream);
+  box-shadow: 2px 2px 0 var(--shadow);
+  font-family: var(--font-hand);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: transform 150ms ease, background 150ms ease;
+}
+
+.quote-arrow:hover,
+.quote-arrow:focus-visible {
+  background: var(--blue);
+  transform: translateY(-1px) rotate(-2deg);
+}
+
+.quote-counter {
+  min-width: 46px;
+  padding: 4px 9px 3px;
+  border: 1px dashed var(--ink-soft);
+  border-radius: 7px 3px 6px 4px;
+  color: var(--ink-soft);
+  background: color-mix(in srgb, var(--blue) 64%, var(--cream));
+  font-family: var(--font-hand);
+  font-size: 0.88rem;
+  line-height: 1;
+  text-align: center;
+  transform: rotate(-1deg);
 }
 
 .detail-themes {
@@ -1070,7 +1121,7 @@ input:focus-visible {
     font-size: clamp(1.75rem, 8vw, 2.4rem);
   }
 
-  .detail-quote,
+  .detail-quote-frame,
   .detail-themes,
   .where-button {
     grid-column: 1 / -1;
@@ -1090,7 +1141,7 @@ input:focus-visible {
     align-self: center;
   }
 
-  .detail-quote {
+  .detail-quote-frame {
     margin-top: 8px;
   }
 

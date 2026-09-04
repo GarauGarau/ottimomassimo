@@ -11,7 +11,7 @@ Il catalogo del sito nasce dalle cartelle contenute in `libri`. Ogni cartella co
 
 Il catalogo viene rigenerato automaticamente all'avvio. Le schede sono ordinate in base al numero inserito nella sezione `Ordine`.
 
-La sezione `Citazione` deve contenere un solo passaggio tratto dal libro, senza virgolette e con un massimo di 200 parole. Se la scheda non rispetta queste regole, il generatore segnala il problema e interrompe l'aggiornamento.
+Ogni passaggio inserito nella sezione `Citazione` può contenere un massimo di 200 parole. Per aggiungere più citazioni allo stesso libro, separale con una riga che contenga soltanto `---`. Se la scheda non rispetta queste regole, il generatore segnala il problema e interrompe l'aggiornamento.
 
 Le copertine possono avere dimensioni diverse. Il sito le adatta al riquadro senza deformarle. Quando sostituisci un'immagine lasciandole lo stesso nome, il catalogo aggiunge un nuovo identificatore all'indirizzo del file, così il browser non mostra la versione precedente dalla memoria temporanea.
 
