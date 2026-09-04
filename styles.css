@@ -160,8 +160,7 @@ ul {
 
 .pill,
 .hint-pill,
-.where-button,
-.popup-action {
+.where-button {
   border: 2px solid var(--ink);
   border-radius: 255px 16px 225px 16px / 16px 225px 16px 255px;
   box-shadow: 3px 3px 0 var(--ink);
@@ -198,9 +197,7 @@ ul {
 .pill:hover,
 .pill:focus-visible,
 .where-button:hover,
-.where-button:focus-visible,
-.popup-action:hover,
-.popup-action:focus-visible {
+.where-button:focus-visible {
   background: var(--yellow);
   box-shadow: 4px 4px 0 var(--ink);
   transform: translate(-1px, -1px);
@@ -889,8 +886,7 @@ ul {
   background: var(--red);
 }
 
-.where-button,
-.popup-action {
+.where-button {
   margin-top: 24px;
   padding: 8px 17px;
   background: var(--yellow);
@@ -938,12 +934,6 @@ ul {
   margin-top: 16px;
   font-size: 1rem;
   line-height: 1.65;
-}
-
-.popup-action {
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .site-footer {
