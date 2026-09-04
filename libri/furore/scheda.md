@@ -20,7 +20,7 @@ John Steinbeck
 
 ## Citazione
 
-Ovunque ci sia una lotta affinché le persone affamate possano mangiare, io sarò lì.
+Terribile è il tempo in cui l’Uomo non voglia soffrire e morire per un’idea, perché quest’unica qualità è fondamento dell’Uomo, e quest’unica qualità è l’uomo in sé, peculiare nell’universo.
 
 ## Temi
 

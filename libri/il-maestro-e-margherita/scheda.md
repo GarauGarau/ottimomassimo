@@ -20,7 +20,7 @@ Michail Bulgakov
 
 ## Citazione
 
-I manoscritti non bruciano.
+L’uomo è mortale, ma questo è solo metà del problema. Il guaio è che a volte muore all’improvviso.
 
 ## Temi
 

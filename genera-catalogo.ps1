@@ -68,8 +68,8 @@ function Read-BookSheet {
     }
 
     $quoteWordCount = @($quote -split '\s+' | Where-Object { $_ }).Count
-    if ($quoteWordCount -gt 25) {
-        throw "La citazione nella cartella '$($BookDirectory.Name)' non può superare 25 parole."
+    if ($quoteWordCount -gt 200) {
+        throw "La citazione nella cartella '$($BookDirectory.Name)' non può superare 200 parole."
     }
 
     $themes = @(

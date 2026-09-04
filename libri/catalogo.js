@@ -6,7 +6,7 @@ window.BOOKS = [
     "author": "John Steinbeck",
     "year": 1939,
     "stars": 5,
-    "quote": "Ovunque ci sia una lotta affinché le persone affamate possano mangiare, io sarò lì.",
+    "quote": "Terribile è il tempo in cui l’Uomo non voglia soffrire e morire per un’idea, perché quest’unica qualità è fondamento dell’Uomo, e quest’unica qualità è l’uomo in sé, peculiare nell’universo.",
     "themes": [
       "Famiglia",
       "Migrazione",
@@ -42,7 +42,7 @@ window.BOOKS = [
     "author": "Haruki Murakami",
     "year": 2002,
     "stars": 5,
-    "quote": "Può darsi che avere in mano il simbolo della propria libertà dia una felicità superiore a quella di possedere la libertà vera.",
+    "quote": "Qualche volta il destino assomiglia a una tempesta di sabbia che muta incessantemente la direzione del percorso. Per evitarla cambi l’andatura. E il vento cambia andatura, per seguirti meglio. Tu allora cambi di nuovo e subito di nuovo il vento cambia per adattarsi al tuo passo. […] Perché quel vento non è qualcosa che è arrivato da lontano, indipendente da te. E’ qualcosa che hai dentro. Quel vento sei tu. Perciò l’unica cosa che puoi fare è entrarci, in quel vento, camminando dritto e chiudendo forte gli occhi per non fare entrare la sabbia. Attraversarlo, un passo dopo l’altro. […] Quando la tempesta sarà finita, probabilmente non saprai neanche tu come hai fatto ad attraversarla e a uscirne vivo. Anzi, non sarai neanche sicuro se sia finita per davvero. Ma su un punto non c’è dubbio. Ed è che tu, uscito da quel vento, non sarai lo stesso che vi è entrato.",
     "themes": [
       "Identità",
       "Destino",
@@ -114,7 +114,7 @@ window.BOOKS = [
     "author": "Michail Bulgakov",
     "year": 1967,
     "stars": 5,
-    "quote": "I manoscritti non bruciano.",
+    "quote": "L’uomo è mortale, ma questo è solo metà del problema. Il guaio è che a volte muore all’improvviso.",
     "themes": [
       "Satira",
       "Potere",

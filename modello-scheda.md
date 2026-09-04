@@ -20,7 +20,7 @@ Nome dell'autore
 
 ## Citazione
 
-Inserisci un solo passaggio tratto dal libro, senza virgolette e di non più di 25 parole.
+Inserisci un solo passaggio tratto dal libro, senza virgolette e di non più di 200 parole.
 
 ## Temi
 
