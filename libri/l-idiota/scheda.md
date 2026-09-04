@@ -20,7 +20,7 @@ Fëdor Dostoevskij
 
 ## Citazione
 
-La compassione era la massima e forse unica legge di vita per l'intera umanità.
+Non c’è nulla di più irritante che essere ricco, di buona famiglia, avvenente, colto, intelligente e perfino buono e, al tempo stesso, non possedere nessuna attitudine speciale, nessuna originalità o almeno un’idea che possa dirsi veramente personale.
 
 ## Temi
 

@@ -20,7 +20,7 @@ John Williams
 
 ## Citazione
 
-Quando si congedarono, sentì che erano estranei in un modo per lui impensabile, e capì di essersi innamorato.
+Mentre sistemava la stanza, che lentamente cominciava a prendere forma, si rese conto che per molti anni, senza neanche accorgersene, come un segreto di cui vergognarsi, aveva nascosto un'immagine dentro di sé. Un'immagine che sembrava alludere a un luogo, ma che in realtà rappresentava lui. Era dunque se stesso che cercava di definire, via via che sistemava lo studio. 
 
 ## Temi
 
